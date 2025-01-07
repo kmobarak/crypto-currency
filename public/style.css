@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #E2F1E7;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background: url('/pattern.svg');
+    background-size: auto;
+    background-position: center;}
+
+h1 {
+    text-align: center;
+    color: #E2F1E7;
+    margin: 20px 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(36, 54, 66, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #387478;
+    border-radius: 5px;
+    background: #E2F1E7;
+    color: #243642;
+}
+
+.form button {
+    padding: 10px 15px;
+    background: #629584;
+    color: #E2F1E7;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background: #387478;
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result h2 {
+    margin-bottom: 10px;
+}
+
+.result p {
+    font-size: 16px;
+}
+
+.error {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+
+.exchange-rate-card {
+    background: rgba(226, 241, 231, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #243642;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.exchange-rate-card h2 {
+    margin-bottom: 15px;
+    color: #387478;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.conversion {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.currency {
+    font-weight: bold;
+    color: #243642;
+}
+
+.arrow {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #629584;
+}
+
+.rate {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #387478;
+    font-weight: bold;
+}
+
+.last-updated {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #243642;
+}
+
+.error {
+    background: rgba(255, 77, 77, 0.9);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}

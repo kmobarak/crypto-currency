@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Crypto Tracker</h1>
+        </header>
+        <form action="/" method="GET" class="form">
+            <label for="from_currency">From (e.g., BTC):</label>
+            <input type="text" id="from_currency" name="from_currency" required placeholder="e.g., BTC">
+
+            <label for="to_currency">To (e.g., USD):</label>
+            <input type="text" id="to_currency" name="to_currency" required placeholder="e.g., USD">
+
+            <button type="submit">Get Rate</button>
+        </form>
+        <div class="result">
+            <% if (error) { %>
+                <div class="error">
+                    <p><strong>Error:</strong> <%= error %></p>
+                </div>
+            <% } else if (cryptoData) { %>
+                <div class="exchange-rate-card">
+                    <h2>Exchange Rate</h2>
+                    <p class="conversion">
+                        <span class="currency"><%= cryptoData.fromCurrencyCode %> (<%= cryptoData.fromCurrencyName %>)</span> 
+                        <span class="arrow">→</span> 
+                        <span class="currency"><%= cryptoData.toCurrencyCode %> (<%= cryptoData.toCurrencyName %>)</span>
+                    </p>
+                    <p class="rate"><strong>Rate:</strong> <%= parseFloat(cryptoData.exchangeRate).toFixed(2) %></p>
+                    <p class="last-updated">
+                        <strong>Last Updated:</strong> <%= cryptoData.lastRefreshed %> (<%= cryptoData.timeZone %>)
+                    </p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
