@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 
 const fetchCryptoData = async (fromCurrency, toCurrency) => {
     const API_URL = 'https://www.alphavantage.co/query';
-    const API_KEY = '0d67e8369fmsh8b8ad87273efb9ap14aadejsnf9be9b36b5af'; 
+    const API_KEY = '0d67e8369fmsh8b8ad87273efb9ap14aadejsnf9be9b36b5af'; // API key is public and free to use
 
     try {
         const response = await axios.get(API_URL, {
